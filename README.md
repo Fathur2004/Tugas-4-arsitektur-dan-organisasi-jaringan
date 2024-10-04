@@ -107,77 +107,129 @@ Selesai, aplikasi ubuntu siap digunakan.
 Sangat penting untuk memilih titik pemasangan yang benar “/” saat memasang sistem operasi seperti linux. Berikut penyebabnya:
 
 Direktori Root:
+
 ~ Direktori utama sistem operasi linux untuk semua file dan direktori adalah “/”, yang juga dikenal sebagai direktori root. Dimulai dari root, setiap program dan file sistem akan diatur dalam hierarki.
+
 ~ Saat memilih “/” sebagai titik pemasangan selama pemasangan sistem operasi, sistem operasi dan file utamanya akan disimpan di disk ini.
 
 Organisasi Berkas Linux:
+
 ~ Struktur direktori di linux bersifat hierarkis dan dimulai dari akar. Direktori akar memuat semua direktori lain, termasuk /home, /var, /etc, dan seterusnya.
+
 ~ Sistem operasi tidak akan dapat berfungsi dengan benar tanpa partisi yang dipasang pada “/” karena tidak memiliki tempat untuk menyimpan berkas sistemnya.
 
 Menyiapkan partisi:
+
 ~ Partisi baru dibuat dalam instalasi ini untuk berfungsi sebagai partisi utama. “/’ adalah partisi yang diperlukan untuk sistem operasi, sementara kita dapat memilih untuk membuat partisi lain untuk folder tertentu, sperti /home.
 
 Memanfaatkan sistem berkas:
+
 ~ Karena keandalan dan kinerjanya yang kuat, pengguna linux sering memilih sistem berkas Ext4, yang merupakan partisi yang dikonfigurasi untuk digunakan dalam citra ini.
 
 Karena disinilah sistem operasi akan diinstal, memilih “/” pada opsi Mount Point selama instalasi merupakan langkah yang diperlukan untuk menjamin bahwa sistem operasi dapat berfungsi dengan baik.
+
 
 3. Berikan penjelasan tentang ext4, ext3, swap, ntfs, fat32,btrfs !
 
 Berikut ini menjelaskan berbagai jenis sistem berkas yang sering ditemukan dalam sistem operasi:
 
+
 Ext4
+
 • Iterasi terbaru dari sistem berkas Linux yang populer, Ext4, disebut Ext4.
+
 • Ext4 lebih stabil, berkinerja lebih baik, dan mendukung kapasitas penyimpanan yang lebih besar daripada Ext3.
+
 • Fitur Unggulan:
+
 ~Dukungan untuk berkas dan volume hingga 16 terabyte dan hingga 1 exabyte.
+
 ~menggunakan penjurnalan untuk melindungi dari kerusakan data jika terjadi penghentian atau kerusakan sistem yang tidak terduga.
+
 ~memiliki fitur ekstensi yang mempercepat akses berkas dan menurunkan fragmentasi disk.
+
 • Penggunaan: Sistem operasi Linux terkini (Ubuntu, Fedora, Debian, dll.).
 
+
 Ext3
+
 • Ext3 adalah sistem berkas penjurnalan pertama untuk Linux dan cikal bakal Ext4.
+
 • Fitur Utama :
+
 ~Dengan mencatat perubahan sebelum ditulis ke disk, penjurnalan meningkatkan keamanan terhadap kegagalan sistem.
+
 ~Meskipun lebih lambat dari Ext4, sistem ini lebih stabil dan terbukti dapat diandalkan dalam berbagai pengaturan produksi
+
 ~Karena partisi Ext2 kompatibel dengan Ext3, data tidak akan hilang selama pemutakhiran dari Ext2 ke Ext3.
+
 • Penggunaan : Sering digunakan pada server yang stabil atau sistem Linux lama yang tidak memerlukan fitur Ext4 yang lebih baru.
 
+
 Swap
+
 • Swap adalah area hard drive yang digunakan sistem operasi untuk menambah memori virtual, ini bukanlah sistem file.
+
 • Data dari memori akan ditukar dengan (swapped) saat RAM habis.
+
 • Fungsi: Meskipun RAM fisik memiliki keterbatasan, ini memungkinkan sistem operasi untuk mengelola lebih banyak proses.
+
 • penggunaan: Sebagai memori virtual tambahan dalam sistem Linux dan Unix.
 
+
 Ntfs
+
 • Ntfs adalah sistem file yang dikembangkan oleh Microsoft untuk digunakan pada sistem operasi Windows.
+
 • Fitur
+
 ~Memungkinkan partisi hingga 256 TB dan mendukung berkas besar hingga 16 TB.
+
 ~Memiliki dukungan metadata, keamanan data, enkripsi berkas, dan kemampuan pemulihan kesalahan.
+
 ~mendukung fungsi termasuk kompresi data, penjurnalan, dan izin berkas (ACL).
+
 • Penggunaan: Hard drive eksternal, USB yang digunakan dengan Windows, dan sistem operasi Windows terkini (Windows 2000 dan yang lebih baru).
 
+
 Fat32
+
 • Sistem file FAT yang disebut FAT32 sering digunakan dalam perangkat penyimpanan seperti kartu memori dan flashdisk USB.
+
 • Fitur :
+
 ~ Memungkinkan ukuran partisi hingga 32 GB dan ukuran file hingga 4 GB.
+
 ~lebih kompatibel dengan berbagai sistem operasi, tetapi tidak menyertakan fitur penjurnalan atau keamanan seperti NTFS.
 
 • Penggunaan: Drive USB dan kartu SD, yang merupakan perangkat penyimpanan portabel yang perlu bekerja dengan sistem operasi Linux, macOS, dan Windows.
+
+
 6. Btrfs
+7. 
 • Btrfs adalah sistem berkas canggih yang dirancang untuk Linux yang memprioritaskan snapshot, manajemen volume besar, dan integritas data.
+
 • Fitur Utama :
+
 ~Mendukung fitur-fitur termasuk dukungan volume besar, verifikasi integritas data, kompresi, dan snapshot.
+
 ~Dengan snapshot, pengguna dapat dengan cepat dan mudah membuat salinan data tanpa menghabiskan banyak ruang.
+
 ~Sangat baik dalam menangani data dalam jumlah besar dan mampu memperbaiki data yang rusak secara otomatis.
 
 • Penggunaan : Sistem cadangan, server Linux, dan pengguna yang membutuhkan alat manajemen volume dan snapshot yang efektif.
 
+
 Ringkasan Penggunaan :
 
 • Ext4 : Sistem file default di sebagian besar distribusi Linux modern.
+
 • Ext3 : Sistem file penjurnalan Linux lama yang lebih andal.
+
 • Swap : Dalam sistem operasi Linux, swap digunakan sebagai memori virtual tambahan
+
 • NTFS : Volume besar dan fitur keamanan didukung oleh sistem berkas bawaan Windows.
+
 • FAT32 : sistem file digunakan dalam perangkat penyimpanan portabel yang perlu bekerja dengan sistem operasi yang berbeda.
+
 • Btrfs : Sistem file Linux canggih dengan fungsionalitas untuk kompresi dan snapshot
