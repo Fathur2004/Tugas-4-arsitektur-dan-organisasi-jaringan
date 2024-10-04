@@ -1,6 +1,9 @@
 Nama : Fathur Rahman
+
 NIM : 09030282327047
+
 Kelas : TK 3 C
+
 Mata Kuliah : Arsitektur dan Organisasi Komputer
 
 1. Buatlah laporan proses instalasi di computer mahasiswa dan tampilkan screenshotnya.
